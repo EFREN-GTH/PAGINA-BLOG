@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>¿Qué son las Formas Normales?</title>
+<link rel="icon" type="image/x-icon" href="../eLogo.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="art_estilos.css">
+
+</head>
+<body>
+<div class="row">
+  <ul class="breadcrumb">
+    <li><a href="../inicio.html">Inicio</a></li>
+    <li><a href="../blog.html">Blog</a></li>
+    <li>Formas Normales</li>
+  </ul>
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>BASES DE DATOS </h2>
+      <h5>¿Qué son las Formas Normalizadas? Octubre, 2022</h5>
+      <div class="container">
+        <iframe class="responsive-iframe" width="560" height="315" src="https://www.youtube.com/embed/bO18omSzeR4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <h3>Resumen</h3>
+      <p>"Es un proceso para eliminar o minimizar la redundancia de datos mediante una serie de reglas".</p>
+      <p><b>1FN:</b> Eliminar valores repetidos no atómicos.</p>
+      <p>Ejemplo: En un campo teléfono no podríamos poner varios teléfonos.</p>
+      <br>
+      <p><b>2FN:</b> Además de cumplir con la FN1 debemos identificar con un valor único a cada elemento. Depender completamente sólo de la clave principal
+    </p>
+    <p>Ejemplo: Si tenemos una tabla con Personas, identificadas por su NIF y recogemos su empresa y dirección de trabajo, la clave sería NIF-Empresa. 
+      Pero nos encontraremos con que una misma persona puede trabajar en varias empresas. Y vemos que la dirección de trabajo no depende de TODA la clave primaria, sino solo de la empresa. 
+      Por lo tanto, no estamos en 2FN.</p>
+    <br>
+      <p><b>3FN:</b> Cada atributo que no forma parte de la clave no debe tener dependencia transitiva a parte de cumplir con la 1FN y 2FN.
+    </p>
+     <p>Ejemplo: Supongamos que tenemos una tabla de ganadores de torneos de tenis. En ella figura el nombre del torneo, el año, el nombre del ganador y su nacionalidad. 
+      La clave sería Torneo-Año. Pues esta tabla no está en 3FN porque el atributo nacionalidad, que no es de la clave, depende del nombre del ganador (también depende de la clave). 
+      Digamos que nacionalidad aporta información sobre el ganador, pero no sobre la clave. Es una dependencia transitiva porque nacionalidad depende de ganador que a su vez depende de Torneo-Año.</p>
+
+
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h3>Artículos Populares</h3>
+      <div class="imgbox"> <a href="../blog.html"><img src="../blogIMG/lenguaje-marcas.jpg"><div class="articletitle">Lenguaje de Marcas</div></a></div><br>
+      <div class="imgbox"> <a href="../blog.html"><img src="../blogIMG/sistemas-informaticos.jpg"><div class="articletitle">Sistemas Informáticos</div></a></div><br>
+      <div class="imgbox"> <a href="../Articulos/BBDD.html"><img src="../blogIMG/bbdd.jpg"><div class="articletitle">Bases de Datos</div></a></div>
+    </div>
+    <div class="card">
+      <h3>Sígueme</h3>
+      <p>@efren</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
